@@ -1,63 +1,54 @@
 pageInfo:
-  title: Dashy
-  description: All your shit in one spot
+  title: The Tassie Dashboard
+  description: Some cool things to monitor stuff
   navLinks:
     - title: GitHub
       path: https://github.com/Lissy93/dashy
+      target: newtab
     - title: Documentation
       path: https://dashy.to/docs
+      target: newtab
 appConfig:
-  theme: default
+  theme: colorful
+  layout: horizontal
+  iconSize: large
 sections:
-  - name: Getting Started
+  - name: Useful links
     icon: fas fa-rocket
     items:
       - &ref_0
-        title: Dashy Live
-        description: Development a project management links for Dashy
-        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-        url: https://live.dashy.to/
-        target: newtab
-        id: 0_1481_dashylive
-      - &ref_1
-        title: GitHub
-        description: Source Code, Issues and Pull Requests
-        url: https://github.com/lissy93/dashy
-        icon: favicon
-        id: 1_1481_github
-      - &ref_2
         title: Docs
         description: Configuring & Usage Documentation
         provider: Dashy.to
         icon: far fa-book
         url: https://dashy.to/docs
-        id: 2_1481_docs
-      - &ref_3
-        title: Showcase
-        description: See how others are using Dashy
-        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-        icon: far fa-grin-hearts
-        id: 3_1481_showcase
-      - &ref_4
+        id: 0_1205_docs
+      - &ref_1
         title: Config Guide
         description: See full list of configuration options
         url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
         icon: fas fa-wrench
-        id: 4_1481_configguide
-      - &ref_5
-        title: Support
-        description: Get help with Dashy, raise a bug, or get in contact
-        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-        icon: far fa-hands-helping
-        id: 5_1481_support
+        id: 1_1205_configguide
+      - &ref_2
+        title: Weather Forecast
+        description: Metvuw
+        icon: fas fa-cloud
+        url: >-
+          https://metvuw.com/forecast/forecast.php?type=rain&region=victoria&noofdays=10
+        target: modal
+        id: 2_1205_weatherforecast
+      - &ref_3
+        title: Summit Cam
+        icon: fas fa-camera
+        url: https://hccapps.hobartcity.com.au/webcams/summit
+        target: modal
+        id: 3_1205_summitcam
     filteredItems:
       - *ref_0
       - *ref_1
       - *ref_2
       - *ref_3
-      - *ref_4
-      - *ref_5
-  - name: test
+  - name: Weather & Cams
     displayData:
       sortBy: default
       rows: 2
@@ -67,51 +58,18 @@ sections:
     items: []
     widgets:
       - type: clock
-        id: 0_448_clock
+        id: 0_1210_clock
       - type: image
         options:
           imagePath: https://hccapps.hobartcity.com.au/webcams/summit
-        id: 1_448_image
+        id: 1_1210_image
       - type: image
         options:
           imagePath: https://hccapps.hobartcity.com.au/webcams/platform
-        id: 2_448_image
+        id: 2_1210_image
       - type: image
         options:
           imagePath: >-
             https://www.transport.tas.gov.au/__traffic_updates/204_Tasman_Bridge.jpeg
-        id: 3_448_image
-      - type: image
-        options:
-          imagePath: >-
-            https://www.metvuw.com/forecast/2024112718/rain-victoria-2024112718-006.gif
-        id: 4_448_image
-    filteredItems: []
-  - name: metvuw
-    displayData:
-      sortBy: default
-      rows: 3
-      cols: 1
-      collapsed: false
-      hideForGuests: false
-    items: []
-    widgets:
-      - type: iframe
-        options:
-          url: >-
-            https://www.metvuw.com/forecast/forecast1.php?type=rain&region=victoria&tim=006
-        id: 0_680_iframe
-    filteredItems: []
-  - displayData:
-      sortBy: default
-      rows: 3
-      cols: 3
-      collapsed: false
-      hideForGuests: false
-    items: []
-    widgets:
-      - type: gl-mem-speedometer
-        options:
-          hostname: http://127.0.0.1:61208
-        id: 0_2251_glmemspeedometer
+        id: 3_1210_image
     filteredItems: []
